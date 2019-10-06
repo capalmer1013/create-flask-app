@@ -1,12 +1,12 @@
-# create-flask-app
-App for creating flask apps
+# Sample Application
+Sample Create Flask app
 
 # Running Locally
 - (If macOS) `brew install pyenv` [pyenv docs](https://github.com/pyenv/pyenv) (otherwise you need to install and use python 3.4.8 yourself somehow)
 - (If macOS) Add `$(pyenv root)/shims:` to your `PATH` in `.bash_profile`
 - (If macOS) Open a new terminal window
-- `git clone https://github.com/capalmer1013/create-flask-app.git`
-- `cd create-flask-app`
+- `git clone https://github.com/capalmer1013/sample-app.git`
+- `cd sample-app`
 - `pip install --user pipenv` [pipenv docs](https://docs.python-guide.org/en/latest/dev/virtualenvs/)
 - `pipenv install`
     - if you get:
@@ -33,9 +33,9 @@ App for creating flask apps
         - If you used the mothod above to install Postgres, `DATABASE_URL=postgres://postgres:test@localhost` where `test` is the password
 - You should be good to go!
     - To run tests: `make tests`
-        - If python is not able to find createflaskapp in the test scripts add a symlink to `./tests/`
+        - If python is not able to find sampleapp in the test scripts add a symlink to `./tests/`
             - `cd tests`
-            - `ln -s ../createflaskapp createflaskapp`
+            - `ln -s ../sampleapp sampleapp`
     - To run tests for a specific API resource: `pipenv run python3 -W ignore -m unittest tests/resource_tests/test_user_auth.py`
         - Substitute with any resource and it will work
     - To run the server: `make local-server`
